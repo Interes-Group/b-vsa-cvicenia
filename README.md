@@ -1,6 +1,6 @@
 # B-VSA LS 21/22 Cvičenie 4
 
-[![GitHub](https://img.shields.io/github/license/interes-group/b-vsa-ls22-cvicenie3)](http://www.opensource.org/licenses/mit-license.php)
+[![GitHub](https://img.shields.io/github/license/interes-group/b-vsa-cvicenia)](https://unlicense.org)
 [![Java](https://img.shields.io/badge/Java-8-red)](https://openjdk.java.net/projects/jdk/8/)
 [![EclipseLink](https://img.shields.io/badge/EclipseLink-2.7.10-blue)](https://www.eclipse.org/eclipselink/)
 
