@@ -1,4 +1,4 @@
-# B-VSA LS 21/22 Cvičenie 3
+# B-VSA LS 21/22 Cvičenie 2
 
 [![GitHub](https://img.shields.io/github/license/interes-group/b-vsa-cvicenia)](https://unlicense.org)
 [![Java](https://img.shields.io/badge/Java-8-red)](https://openjdk.java.net/projects/jdk/8/)
@@ -7,8 +7,8 @@
 Tento repozitár je určený pre výučbu predmetu B-VSA vyučovaný na FEI STU Bratislava počas letného semestra 2021/2022.
 Jednotlivé branches repozitáru demonštrujú problematiku preberanú na jednotlivých cvičeniach.
 
-Cieľom cvičenia 3 je demonštrovať možnosti jednosmerných asociácií entitných tried. Cvičenie sa odvíja
-od [študijných materiálov](https://docs.google.com/document/d/1QzoTan8f9npokdFjPQnTIrIRXFj-i7O0pnEYRmslx7Y/)
+Cieľom cvičenia 2 je demonštrovať možnosti práce s pripojenou SQL databázou pomocou technológie JPA. Cvičenie sa odvíja
+od [študijných materiálov](https://docs.google.com/document/d/1bdO2wjQunhiADqzhLwcZmGMod493ijyhv5xhECiKCQU/)
 dostupných na [stránke predmetu](https://uim.fei.stuba.sk/predmet/b-vsa/).
 
 Pre demonštráciu problematiky cvičenie využíva databázu MySQL a JPA implementáciu EclipseLink. Jednotlivé triedy
@@ -41,8 +41,8 @@ súbor [persistence.xml](src/main/resources/META-INF/persistence.xml). Uvedený 
 hodnotami.
 
 ```sql
-CREATE DATABASE IF NOT EXISTS VSA_CV3 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS VSA_CV2 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER IF NOT EXISTS 'vsa'@'localhost' IDENTIFIED BY 'vsa';
-GRANT ALL PRIVILEGES ON VSA_CV3.* TO 'vsa'@'localhost';
+GRANT ALL PRIVILEGES ON VSA_CV2.* TO 'vsa'@'localhost';
 FLUSH PRIVILEGES;
 ```
