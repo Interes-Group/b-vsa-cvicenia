@@ -1,8 +1,7 @@
-package sk.stuba.fei.uim.vsa.cv4.domain;
+package sk.stuba.fei.uim.vsa.cv3.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -22,8 +21,8 @@ public class Developer implements Serializable {
 
     private String name;
 
-    @ToString.Exclude
-    @OneToMany(mappedBy = "developer", cascade = CascadeType.REMOVE)
+    @OneToMany
+    @JoinColumn(name = "DEVELOPER_ID")
     private List<Game> games;
 
     public Developer(String name) {

@@ -1,8 +1,7 @@
-package sk.stuba.fei.uim.vsa.cv4.domain;
+package sk.stuba.fei.uim.vsa.cv3.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -28,13 +27,11 @@ public class Game implements Serializable {
     @Enumerated(EnumType.STRING)
     private Set<Genre> genres;
 
-    @ToString.Exclude
     @ManyToMany
     private List<Publisher> publishers;
 
-    @ToString.Exclude
-    @ManyToOne
-    private Developer developer;
+//    @ManyToOne
+//    private Developer developer;
 
 
     public Game(String name, Genre... genres) {

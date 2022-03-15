@@ -1,12 +1,13 @@
-package sk.stuba.fei.uim.vsa.cv4.domain;
+package sk.stuba.fei.uim.vsa.cv3.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -20,10 +21,6 @@ public class Publisher implements Serializable {
     private Long id;
 
     private String name;
-
-    @ToString.Exclude
-    @ManyToMany(mappedBy = "publishers")
-    private List<Game> games;
 
     public Publisher(String name) {
         this.name = name;
