@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.vsa.cv4.domain;
+package sk.stuba.fei.uim.vsa.cv5.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,29 +16,27 @@ import java.util.Set;
 @Entity
 public class Game implements Serializable {
 
-    private static final long serialVersionUID = 2996702055645581511L;
+    private static final long serialVersionUID = -7366677726110917410L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @EmbeddedId
+    private GameId id;
 
-    private String name;
+    @ToString.Exclude
+    @ManyToOne
+    @MapsId("developerId")
+    private Developer developer;
 
     @ElementCollection
     @Enumerated(EnumType.STRING)
     private Set<Genre> genres;
 
     @ToString.Exclude
-    @ManyToMany
+    @ManyToMany(mappedBy = "games", cascade = CascadeType.ALL)
     private List<Publisher> publishers;
 
-    @ToString.Exclude
-    @ManyToOne
-    private Developer developer;
 
-
-    public Game(String name, Genre... genres) {
-        this.name = name;
+    public Game(GameId gameId, Genre... genres) {
+        this.id = gameId;
         this.genres = new HashSet<>(Arrays.asList(genres));
     }
 }

@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.vsa.cv4.domain;
+package sk.stuba.fei.uim.vsa.cv5.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -6,6 +6,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -22,10 +23,17 @@ public class Publisher implements Serializable {
     private String name;
 
     @ToString.Exclude
-    @ManyToMany(mappedBy = "publishers")
+    @ManyToMany
     private List<Game> games;
 
     public Publisher(String name) {
         this.name = name;
     }
+
+    public void addGame(Game game) {
+        if (games == null)
+            games = new ArrayList<>();
+        games.add(game);
+    }
+
 }

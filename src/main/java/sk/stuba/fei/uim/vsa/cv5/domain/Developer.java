@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.vsa.cv4.domain;
+package sk.stuba.fei.uim.vsa.cv5.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,7 +14,7 @@ import java.util.List;
 @Entity
 public class Developer implements Serializable {
 
-    private static final long serialVersionUID = 4823417357668565956L;
+    private static final long serialVersionUID = 2289590339062908943L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,7 +23,7 @@ public class Developer implements Serializable {
     private String name;
 
     @ToString.Exclude
-    @OneToMany(mappedBy = "developer", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "developer", cascade = CascadeType.REMOVE, orphanRemoval = true)
     private List<Game> games;
 
     public Developer(String name) {
