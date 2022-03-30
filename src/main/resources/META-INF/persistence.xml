@@ -4,13 +4,13 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>sk.stuba.fei.uim.vsa.cv5.domain.Game</class>
-        <class>sk.stuba.fei.uim.vsa.cv5.domain.Developer</class>
-        <class>sk.stuba.fei.uim.vsa.cv5.domain.Publisher</class>
+        <class>sk.stuba.fei.uim.vsa.cv7.domain.Game</class>
+        <class>sk.stuba.fei.uim.vsa.cv7.domain.Developer</class>
+        <class>sk.stuba.fei.uim.vsa.cv7.domain.Publisher</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/VSA_CV5"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/VSA_CV7"/>
             <property name="javax.persistence.jdbc.user" value="vsa"/>
             <property name="javax.persistence.jdbc.password" value="vsa"/>
 

@@ -1,4 +1,4 @@
-# B-VSA LS 21/22 Cvičenie 5
+# B-VSA LS 21/22 Cvičenie 7
 
 [![GitHub](https://img.shields.io/github/license/interes-group/b-vsa-cvicenia)](https://unlicense.org)
 [![Java](https://img.shields.io/badge/Java-8-red)](https://openjdk.java.net/projects/jdk/8/)
@@ -7,11 +7,11 @@
 Tento repozitár je určený pre výučbu predmetu B-VSA vyučovaný na FEI STU Bratislava počas letného semestra 2021/2022.
 Jednotlivé branches repozitáru demonštrujú problematiku preberanú na jednotlivých cvičeniach.
 
-Cieľom cvičenia 5 je demonštrovať implementáciu kompozitného primárneho kľúča entity, ktorý obsahuje cudzí kľúč (
-asociáciu) na inú entitu.
+Cieľom cvičenia 7 je demonštrovať implementáciu REST webových služieb pomocou JAX-RS (framework jersey), nastavenia
+aplikačného servera a testovanie HTTP požiadavok.
 
-Pre demonštráciu problematiky cvičenie využíva databázu MySQL a JPA implementáciu EclipseLink. Jednotlivé triedy
-aplikácie slúžia výhradne na demonštráciu problematiky.
+Pre demonštráciu problematiky cvičenie využíva databázu MySQL a JPA implementáciu EclipseLink, Jersey a HTTP server
+Grizzly2. Jednotlivé triedy aplikácie slúžia výhradne na demonštráciu problematiky.
 
 ## Inštalácia a spustenie
 
@@ -40,8 +40,8 @@ súbor [persistence.xml](src/main/resources/META-INF/persistence.xml). Uvedený 
 hodnotami.
 
 ```sql
-CREATE DATABASE IF NOT EXISTS VSA_CV5 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS VSA_CV7 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER IF NOT EXISTS 'vsa'@'localhost' IDENTIFIED BY 'vsa';
-GRANT ALL PRIVILEGES ON VSA_CV5.* TO 'vsa'@'localhost';
+GRANT ALL PRIVILEGES ON VSA_CV7.* TO 'vsa'@'localhost';
 FLUSH PRIVILEGES;
 ```
