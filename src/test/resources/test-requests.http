@@ -2,3 +2,32 @@ GET http://localhost:8080/api/game
 Accept: application/json
 
 ###
+POST http://localhost:8080/api/developer
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Blizzard"
+}
+
+###
+POST http://localhost:8080/api/game
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "WoW",
+  "genres": [
+    "MMO",
+    "RPG"
+  ],
+  "developer": {
+    "id": 1,
+    "name": "Blizzard"
+  },
+  "publishers": [
+    {
+      "name": "Activision"
+    }
+  ]
+}

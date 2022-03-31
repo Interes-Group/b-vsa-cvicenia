@@ -14,6 +14,9 @@ public class PublisherResponseFactory implements ResponseFactory<Publisher, Publ
 
     @Override
     public Publisher transformToEntity(PublisherDto dto) {
-        return null;
+        Publisher pub = new Publisher();
+        pub.setId(dto.getId());
+        pub.setName(dto.getName());
+        return pub;
     }
 }

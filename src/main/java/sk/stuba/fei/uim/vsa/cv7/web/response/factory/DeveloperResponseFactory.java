@@ -14,6 +14,9 @@ public class DeveloperResponseFactory implements ResponseFactory<Developer, Deve
 
     @Override
     public Developer transformToEntity(DeveloperDto dto) {
-        return null;
+        Developer dev = new Developer();
+        dev.setId(dto.getId());
+        dev.setName(dto.getName());
+        return dev;
     }
 }
