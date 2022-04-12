@@ -1,0 +1,12 @@
+resources:
+ Game
+ Developer
+ Publisher
+
+Game resource:
+ GET /api/game/ -> returns all known games
+ GET /api/game/{name} -> returns a game with {name}
+ POST /api/game/ -> returns a new game
+ DELETE
+ PUT /api/game/{name}
+ PATCH

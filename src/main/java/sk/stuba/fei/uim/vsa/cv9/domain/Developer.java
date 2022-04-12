@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.vsa.cv7.domain;
+package sk.stuba.fei.uim.vsa.cv9.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,9 +12,9 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @Entity
-public class Publisher implements Serializable {
+public class Developer implements Serializable {
 
-    private static final long serialVersionUID = 5438586895859339503L;
+    private static final long serialVersionUID = 2289590339062908943L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,10 +23,10 @@ public class Publisher implements Serializable {
     private String name;
 
     @ToString.Exclude
-    @ManyToMany
+    @OneToMany(mappedBy = "developer", cascade = CascadeType.REMOVE, orphanRemoval = true)
     private List<Game> games;
 
-    public Publisher(String name) {
+    public Developer(String name) {
         this.name = name;
     }
 
@@ -35,5 +35,4 @@ public class Publisher implements Serializable {
             games = new ArrayList<>();
         games.add(game);
     }
-
 }

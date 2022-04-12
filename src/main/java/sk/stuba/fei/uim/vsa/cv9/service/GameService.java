@@ -1,6 +1,6 @@
-package sk.stuba.fei.uim.vsa.cv7.service;
+package sk.stuba.fei.uim.vsa.cv9.service;
 
-import sk.stuba.fei.uim.vsa.cv7.domain.Game;
+import sk.stuba.fei.uim.vsa.cv9.domain.Game;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

@@ -1,13 +1,13 @@
-package sk.stuba.fei.uim.vsa.cv7.web;
+package sk.stuba.fei.uim.vsa.cv9.web;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import sk.stuba.fei.uim.vsa.cv7.domain.Developer;
-import sk.stuba.fei.uim.vsa.cv7.service.DeveloperService;
-import sk.stuba.fei.uim.vsa.cv7.web.response.DeveloperDto;
-import sk.stuba.fei.uim.vsa.cv7.web.response.factory.DeveloperResponseFactory;
+import sk.stuba.fei.uim.vsa.cv9.domain.Developer;
+import sk.stuba.fei.uim.vsa.cv9.service.DeveloperService;
+import sk.stuba.fei.uim.vsa.cv9.web.response.DeveloperDto;
+import sk.stuba.fei.uim.vsa.cv9.web.response.factory.DeveloperResponseFactory;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

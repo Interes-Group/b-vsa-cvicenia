@@ -31,3 +31,17 @@ Accept: application/json
     }
   ]
 }
+
+###
+GET http://localhost:8080/api/publisher
+Accept: application/json
+
+###
+POST http://localhost:8080/api/publisher
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Microsoft",
+  "games": []
+}

@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.vsa.cv7.web.response;
+package sk.stuba.fei.uim.vsa.cv9.web.response;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

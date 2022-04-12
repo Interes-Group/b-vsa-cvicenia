@@ -1,7 +1,7 @@
-package sk.stuba.fei.uim.vsa.cv7.web.response.factory;
+package sk.stuba.fei.uim.vsa.cv9.web.response.factory;
 
-import sk.stuba.fei.uim.vsa.cv7.domain.*;
-import sk.stuba.fei.uim.vsa.cv7.web.response.GameDto;
+import sk.stuba.fei.uim.vsa.cv9.domain.*;
+import sk.stuba.fei.uim.vsa.cv9.web.response.GameDto;
 
 import java.util.List;
 import java.util.stream.Collectors;

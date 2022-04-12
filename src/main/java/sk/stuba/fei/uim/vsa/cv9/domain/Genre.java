@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.vsa.cv7.domain;
+package sk.stuba.fei.uim.vsa.cv9.domain;
 
 public enum Genre {
     RPG,

@@ -1,0 +1,77 @@
+openapi: 3.0.1
+info:
+  title: B-VSA Cvičenie Application
+  version: 1.0.0
+servers:
+- url: http://localhost:8080/api
+tags:
+- name: publisher
+  description: Publisher Api
+paths:
+  /publisher:
+    get:
+      summary: Get all publishers
+      operationId: getAllPublishers
+      tags:
+      - publisher
+      responses:
+        200:
+          description: Returns all knowns publisher
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Publisher'
+        400:
+          description: Client error
+          content: {}
+        500:
+          description: Server error
+          content: {}
+    post:
+      summary: Create a publisher
+      operationId: createNewPublisher
+      tags:
+        - publisher
+      requestBody:
+        description: Object of new publisher
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+        required: true
+      responses:
+        201:
+          description: Returns newly created publisher entity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Publisher'
+        400:
+          description: Client error
+          content: {}
+        500:
+          description: Server error
+          content: {}
+components:
+  schemas:
+    Publisher:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        games:
+          type: array
+          items:
+            $ref: '#/components/schemas/Game'
+            
+    Game:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
