@@ -1,0 +1,2 @@
+GET http://localhost:8080/b-vsa-glassfish-demo-1.0-SNAPSHOT/api/hello?name=Jožko
+Accept: text/plain
