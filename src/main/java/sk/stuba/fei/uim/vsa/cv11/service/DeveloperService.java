@@ -1,38 +1,36 @@
-package sk.stuba.fei.uim.vsa.cv9.service;
+package sk.stuba.fei.uim.vsa.cv11.service;
 
-import sk.stuba.fei.uim.vsa.cv9.domain.Publisher;
+import sk.stuba.fei.uim.vsa.cv11.domain.Developer;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
-import java.util.List;
 
-public class PublisherService {
+public class DeveloperService {
 
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
 
-    public List<Publisher> getAllPublishers() {
+    public Developer findByName(String name) {
         EntityManager em = emf.createEntityManager();
-        TypedQuery<Publisher> query = em.createQuery("select p from Publisher p", Publisher.class);
-        List<Publisher> ps = query.getResultList();
+        TypedQuery<Developer> query = em.createQuery("select d from Developer d where d.name=" + name, Developer.class);
+        Developer dev = query.getSingleResult();
         em.close();
-        return ps;
+        return dev;
     }
 
-    public Publisher createPublisher(Publisher publisher) {
+    public Developer save(Developer developer) {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            em.persist(publisher);
+            em.persist(developer);
             em.getTransaction().commit();
-        } catch (Exception ex) {
+        } catch (Exception e) {
             if (em.getTransaction().isActive())
                 em.getTransaction().rollback();
         }
         em.close();
-        return publisher;
+        return developer;
     }
-
 
 }

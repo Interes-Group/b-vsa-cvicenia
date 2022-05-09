@@ -1,4 +1,4 @@
-# B-VSA LS 21/22 Cvičenie 9
+# B-VSA LS 21/22 Cvičenie 11
 
 [![GitHub](https://img.shields.io/github/license/interes-group/b-vsa-cvicenia)](https://unlicense.org)
 [![Java](https://img.shields.io/badge/Java-8-red)](https://openjdk.java.net/projects/jdk/8/)
@@ -7,9 +7,10 @@
 Tento repozitár je určený pre výučbu predmetu B-VSA vyučovaný na FEI STU Bratislava počas letného semestra 2021/2022.
 Jednotlivé branches repozitáru demonštrujú problematiku preberanú na jednotlivých cvičeniach.
 
-Cieľom cvičenia 9 je ukážka definovanie REST špecifikácie pomocou štandardu OpenAPI3 (viď
+Cieľom cvičenia 11 je ukážka definovanie REST špecifikácie pomocou štandardu OpenAPI3 (viď
 súbor [b-vsa-openapi.yml](src/main/resources/b-vsa-openapi.yaml)) a demonštrovať implementáciu REST webových služieb
 pomocou JAX-RS (framework jersey), nastavenia aplikačného servera a testovanie HTTP požiadavok.
+Projekt taktiež zahŕňa ukážku práce s HTTP hlavičkami a autentifikáciou používateľa cez Basic Auth.
 
 Pre demonštráciu problematiky cvičenie využíva databázu MySQL a JPA implementáciu EclipseLink, Jersey a HTTP server
 Grizzly2. Jednotlivé triedy aplikácie slúžia výhradne na demonštráciu problematiky.
@@ -41,8 +42,8 @@ súbor [persistence.xml](src/main/resources/META-INF/persistence.xml). Uvedený 
 hodnotami.
 
 ```sql
-CREATE DATABASE IF NOT EXISTS VSA_CV9 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS VSA_CV11 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER IF NOT EXISTS 'vsa'@'localhost' IDENTIFIED BY 'vsa';
-GRANT ALL PRIVILEGES ON VSA_CV9.* TO 'vsa'@'localhost';
+GRANT ALL PRIVILEGES ON VSA_CV11.* TO 'vsa'@'localhost';
 FLUSH PRIVILEGES;
 ```

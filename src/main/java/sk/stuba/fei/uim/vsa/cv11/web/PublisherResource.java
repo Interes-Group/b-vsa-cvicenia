@@ -1,18 +1,22 @@
-package sk.stuba.fei.uim.vsa.cv9.web;
+package sk.stuba.fei.uim.vsa.cv11.web;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import sk.stuba.fei.uim.vsa.cv9.domain.Publisher;
-import sk.stuba.fei.uim.vsa.cv9.service.PublisherService;
-import sk.stuba.fei.uim.vsa.cv9.web.response.MessageDto;
+import sk.stuba.fei.uim.vsa.cv11.domain.Publisher;
+import sk.stuba.fei.uim.vsa.cv11.service.PublisherService;
+import sk.stuba.fei.uim.vsa.cv11.web.response.MessageDto;
 
+import java.util.Base64;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Path("/publisher")
 public class PublisherResource {
+    private static final Logger LOGGER = Logger.getLogger(PublisherResource.class.getName());
 
     public static final String EMPTY_RESPONSE = "{}";
 
@@ -21,7 +25,10 @@ public class PublisherResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public String getAll() {
+    public String getAll(@HeaderParam(HttpHeaders.AUTHORIZATION) String authorization,
+                         @QueryParam("name") String name) {
+        LOGGER.info("Provided email: " + getEmail(authorization));
+        LOGGER.info("Provided param: " + name);
         List<Publisher> publishers = publisherService.getAllPublishers();
         try {
             return json.writeValueAsString(publishers);
@@ -49,6 +56,12 @@ public class PublisherResource {
         } catch (JsonProcessingException e) {
             return Response.noContent().build();
         }
+    }
+
+    private String getEmail(String authHeader) {
+        String base64Encoded = authHeader.substring("Basic ".length());
+        String decoded = new String(Base64.getDecoder().decode(base64Encoded));
+        return decoded.split(":")[0];
     }
 
 

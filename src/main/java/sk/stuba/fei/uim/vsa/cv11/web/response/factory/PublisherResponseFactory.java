@@ -1,7 +1,7 @@
-package sk.stuba.fei.uim.vsa.cv9.web.response.factory;
+package sk.stuba.fei.uim.vsa.cv11.web.response.factory;
 
-import sk.stuba.fei.uim.vsa.cv9.domain.Publisher;
-import sk.stuba.fei.uim.vsa.cv9.web.response.PublisherDto;
+import sk.stuba.fei.uim.vsa.cv11.domain.Publisher;
+import sk.stuba.fei.uim.vsa.cv11.web.response.PublisherDto;
 
 public class PublisherResponseFactory implements ResponseFactory<Publisher, PublisherDto> {
     @Override

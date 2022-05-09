@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.vsa.cv9;
+package sk.stuba.fei.uim.vsa.cv11;
 
 
 import jakarta.ws.rs.core.UriBuilder;
@@ -11,13 +11,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class Cvicenie9 {
+public class Cvicenie11 {
 
-    public static final Logger LOGGER = Logger.getLogger(Cvicenie9.class.getName());
+    public static final Logger LOGGER = Logger.getLogger(Cvicenie11.class.getName());
     public static final String BASE_URI = "http://localhost/";
 
     public static HttpServer startServer() {
-        final ResourceConfig config = ResourceConfig.forApplicationClass(Cvicenie9Application.class);
+        final ResourceConfig config = ResourceConfig.forApplicationClass(Cvicenie11Application.class);
         URI baseUri = UriBuilder.fromUri(BASE_URI).port(8080).build();
         LOGGER.info("Starting Jetty server...");
         LOGGER.info("Server listening on http://localhost:8080/");

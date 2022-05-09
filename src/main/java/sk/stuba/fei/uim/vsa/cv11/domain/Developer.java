@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.vsa.cv9.domain;
+package sk.stuba.fei.uim.vsa.cv11.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

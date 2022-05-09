@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.vsa.cv9.web;
+package sk.stuba.fei.uim.vsa.cv11.web;
 
 import jakarta.ws.rs.container.ContainerRequestContext;
 import jakarta.ws.rs.container.ContainerResponseContext;

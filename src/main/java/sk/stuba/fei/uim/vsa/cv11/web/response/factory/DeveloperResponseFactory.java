@@ -1,7 +1,7 @@
-package sk.stuba.fei.uim.vsa.cv9.web.response.factory;
+package sk.stuba.fei.uim.vsa.cv11.web.response.factory;
 
-import sk.stuba.fei.uim.vsa.cv9.domain.Developer;
-import sk.stuba.fei.uim.vsa.cv9.web.response.DeveloperDto;
+import sk.stuba.fei.uim.vsa.cv11.domain.Developer;
+import sk.stuba.fei.uim.vsa.cv11.web.response.DeveloperDto;
 
 public class DeveloperResponseFactory implements ResponseFactory<Developer, DeveloperDto> {
     @Override
